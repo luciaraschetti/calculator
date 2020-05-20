@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: darkslateblue;
+}
+
+.wrapper .calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #243441;
+}
+
+.wrapper .calculator .screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    margin-top: 40px;
+    height: 25%;
+    margin-right: 5px;
+}
+
+.wrapper .calculator .screen .result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 25px 0 15px 0;
+    align-self: stretch;
+    font-size: 3rem;
+    color: white;
+}
+
+.wrapper .calculator .screen .operation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3px 0;
+    align-self: stretch;
+    font-size: 1rem;
+    font-weight: 300;
+    color: gray;
+}
+
+.wrapper .calculator .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #57646E;
+}
+
+.wrapper .calculator .buttons .panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+}
+
+.wrapper .calculator .buttons .panel div {
+    display: flex;
+    height: 50px;
+    width: 55px;
+    margin: 10px 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: #243441;
+    box-shadow:   inset -3px 1px 3px #2d3546, 
+                   3px 3px 3px #232733;
+}
+
+.wrapper .calculator .buttons .panel div:hover {
+    cursor: pointer;
+    background-color: #212e38;    
+    box-shadow:   inset -3px 1px 3px #23303a, 
+                  3px 3px 3px #232733;
+}
+
+.wrapper .calculator .buttons .panel div:active {
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.04s;
+}
+
+.wrapper .calculator .buttons .panel div#equal {
+    flex-grow: 2;
+    background-color: rgb(92, 46, 134);
+    font-size: 1.3rem;
+    border-radius: 10px;
+    box-shadow:   inset -3px 1px 3px rgb(105, 58, 150), 
+                  3px 3px 3px #302333;
+}
+
+.wrapper .calculator .buttons .panel div#equal:hover {
+    background-color: rgb(81, 38, 121);
+    box-shadow:     inset -3px 1px 3px rgb(86, 44, 124), 
+                    3px 3px 3px #302333;
+}
+
+
+
