@@ -1,6 +1,10 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 .wrapper {
@@ -12,7 +16,7 @@ body {
     background-color: darkslateblue;
 }
 
-.wrapper .calculator {
+.wrapper #calculator {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,43 +29,45 @@ body {
                   3px 3px 3px #232733;
 }
 
-.wrapper .calculator .screen {
+.wrapper #calculator #screen {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     align-self: stretch;
     margin-top: 40px;
-    height: 25%;
     padding: 5px;
     border-radius: 15px;
     background-color: #2e3b46;
 }
 
-.wrapper .calculator .screen .result {
+.wrapper #calculator #screen #result {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    padding: 25px 0 15px 0;
     align-self: stretch;
+    height: 50px;
+    padding: 25px 0 15px 0;
     font-size: 3rem;
     color: white;
 }
 
-.wrapper .calculator .screen .operation {
+.wrapper #calculator #screen #operation {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    padding: 3px 0;
     align-self: stretch;
+    height: 30px;
+    padding: 3px 0;
     font-size: 1rem;
     font-weight: 300;
     color: gray;
 }
 
-.wrapper .calculator .buttons {
+.wrapper #calculator #panel {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,7 +79,7 @@ body {
     color: #57646E;
 }
 
-.wrapper .calculator .buttons .panel {
+.wrapper #calculator #panel #buttons {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -82,7 +88,7 @@ body {
     align-self: stretch;
 }
 
-.wrapper .calculator .buttons .panel div {
+.wrapper #calculator #panel #buttons .btn {
     display: flex;
     height: 50px;
     width: 55px;
@@ -96,19 +102,19 @@ body {
                    3px 3px 3px #232733;
 }
 
-.wrapper .calculator .buttons .panel div:hover {
+.wrapper #calculator #panel #buttons .btn:hover {
     cursor: pointer;
     background-color: #212e38;    
     box-shadow:   inset -3px 1px 3px #23303a, 
                   3px 3px 3px #232733;
 }
 
-.wrapper .calculator .buttons .panel div:active {
+.wrapper #calculator #panel #buttons .btn:active {
     font-size: 0.9rem;
     transition: 0.04s;
 }
 
-.wrapper .calculator .buttons .panel div#equal {
+.wrapper #calculator #panel #buttons .btn#\= {
     flex-grow: 2;
     background-color: rgb(92, 46, 134);
     font-size: 1.3rem;
@@ -118,16 +124,18 @@ body {
     color: rgb(125, 141, 153);
 }
 
-.wrapper .calculator .buttons .panel div#equal:hover {
+.wrapper #calculator #panel #buttons .btn#\=:hover {
     background-color: rgb(81, 38, 121);
     box-shadow:     inset -3px 1px 3px rgb(86, 44, 124), 
                     3px 3px 3px #302333;
 }
 
-.wrapper .calculator .buttons .panel div#equal:active {
+.wrapper #calculator #panel #buttons .btn#\=:active {
     font-size: 1.2rem;
     transition: 0.04s;
 }
 
-
+.wrapper #calculator #panel #buttons .btn#smiley {
+    font-size: 1.3rem;
+}
 
